@@ -1,11 +1,12 @@
+const { getEnv } = require('../support/Environment');
 const SimpleCalculatorPage = require('../support/pages/SimpleCalculator');
 
 describe('Calculate test suite', () => {
   beforeEach(() => {
-    cy.visit('/calculate/appApi.html');
+    cy.visit(`${getEnv('baseUrl')}/calculate/appApi.html`);
   });
 
-  it('should open the page with correct title', () => {
+  it.only('should open the page with correct title', () => {
     cy.title({ timeout: 1100 }).should('equal', 'SimpleCalculator');
   });
 

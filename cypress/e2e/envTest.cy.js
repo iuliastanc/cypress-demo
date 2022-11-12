@@ -1,10 +1,8 @@
+const { getEnv } = require('../support/Environment');
 const SimpleCalculatorPage = require('../support/pages/SimpleCalculator');
 
-describe.only('Env test', () => {
+describe('Env test', () => {
   it('should have correct env', () => {
-    const x = Cypress.config('x');
-    cy.logToTerminal(env);
-    const currentEnv = Cypress.env[env];
-    cy.logToTerminal(JSON.stringify(currentEnv, null, 2));
+    cy.logToTerminal(JSON.stringify(getEnv('name'), null, 2));
   });
 });
