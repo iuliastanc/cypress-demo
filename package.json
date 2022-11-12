@@ -1,0 +1,25 @@
+{
+  "name": "cypress-demo",
+  "version": "1.0.0",
+  "description": "Cypress POC",
+  "main": "index.js",
+  "scripts": {
+    "cyo": "cypress open --e2e --browser chrome",
+    "cyr": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iuliastanc/cypress-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iuliastanc/cypress-demo/issues"
+  },
+  "homepage": "https://github.com/iuliastanc/cypress-demo#readme",
+  "devDependencies": {
+    "cypress": "^11.0.1",
+    "prettier": "^2.7.1"
+  }
+}
