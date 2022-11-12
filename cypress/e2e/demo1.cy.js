@@ -46,14 +46,15 @@ describe('Calculate test suite', () => {
 
   OPERATIONS_TEST_DATA.forEach(
     ({ nr1, nr2, operationName, expectedResult }) => {
-      it.only(`${operationName}(${nr1}, ${nr2}) = ${expectedResult}`, () => {
+      it(`${operationName}(${nr1}, ${nr2}) = ${expectedResult}`, () => {
         calculateTest({ nr1, nr2, operationName, expectedResult });
       });
     },
   );
 
-  it('task demo', () => {
+  it.only('task demo', () => {
     cy.task('logToTerminal', 'this is a task message');
+    cy.logToTerminal('this is a task message');
   });
 });
 

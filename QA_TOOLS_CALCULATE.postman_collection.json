@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "3b4d3433-f282-4942-b497-28afdaf33206",
+		"name": "QA_TOOLS_CALCULATE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16691547"
+	},
+	"item": [
+		{
+			"name": "multiplication",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    // pm.expect(actual).to.equal(expected);\r",
+							"    pm.expect(pm.response.code).to.equal(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is correct JSON deep equals\", () => {\r",
+							"    const EXPECTED_RESPONSE = {\r",
+							"        \"numbers\": [\r",
+							"            \"3\",\r",
+							"            \"60\"\r",
+							"        ],\r",
+							"        \"operation\": \"2\",\r",
+							"        \"result\": \"180\"\r",
+							"    }\r",
+							"\r",
+							"    pm.expect(pm.response.json()).to.deep.equal(EXPECTED_RESPONSE);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is correct  - sorted array\", () => {\r",
+							"    const EXPECTED_NUMBERS = [\r",
+							"        \"60\",\r",
+							"        \"3\"\r",
+							"    ].sort();\r",
+							"\r",
+							"    pm.expect(pm.response.json().numbers.sort()).to.deep.equal(EXPECTED_NUMBERS);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://qatools.ro/api/calculate.php?firstNumber=3&secondNumber=60&operation=2",
+					"protocol": "http",
+					"host": [
+						"qatools",
+						"ro"
+					],
+					"path": [
+						"api",
+						"calculate.php"
+					],
+					"query": [
+						{
+							"key": "firstNumber",
+							"value": "3"
+						},
+						{
+							"key": "secondNumber",
+							"value": "60"
+						},
+						{
+							"key": "operation",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sum",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    // pm.expect(actual).to.equal(expected);\r",
+							"    pm.expect(pm.response.code).to.equal(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is correct JSON deep equals\", () => {\r",
+							"    const EXPECTED_RESPONSE = {\r",
+							"        \"numbers\": [\r",
+							"            \"3\",\r",
+							"            \"60\"\r",
+							"        ],\r",
+							"        \"operation\": \"1\",\r",
+							"        \"result\": \"63\"\r",
+							"    }\r",
+							"\r",
+							"    pm.expect(pm.response.json()).to.deep.equal(EXPECTED_RESPONSE);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is correct  - sorted array\", () => {\r",
+							"    const EXPECTED_NUMBERS = [\r",
+							"        \"60\",\r",
+							"        \"3\"\r",
+							"    ].sort();\r",
+							"\r",
+							"    pm.expect(pm.response.json().numbers.sort()).to.deep.equal(EXPECTED_NUMBERS);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://qatools.ro/api/calculate.php?firstNumber=3&secondNumber=60&operation=1",
+					"protocol": "http",
+					"host": [
+						"qatools",
+						"ro"
+					],
+					"path": [
+						"api",
+						"calculate.php"
+					],
+					"query": [
+						{
+							"key": "firstNumber",
+							"value": "3"
+						},
+						{
+							"key": "secondNumber",
+							"value": "60"
+						},
+						{
+							"key": "operation",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "division",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    // pm.expect(actual).to.equal(expected);\r",
+							"    pm.expect(pm.response.code).to.equal(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is correct JSON deep equals\", () => {\r",
+							"    const EXPECTED_RESPONSE = {\r",
+							"        \"numbers\": [\r",
+							"            \"60\",\r",
+							"            \"5\"\r",
+							"        ],\r",
+							"        \"operation\": \"3\",\r",
+							"        \"result\": \"12\"\r",
+							"    }\r",
+							"\r",
+							"    pm.expect(pm.response.json()).to.deep.equal(EXPECTED_RESPONSE);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is correct  - sorted array\", () => {\r",
+							"    const EXPECTED_NUMBERS = [\r",
+							"        \"60\",\r",
+							"        \"5\"\r",
+							"    ].sort();\r",
+							"\r",
+							"    pm.expect(pm.response.json().numbers.sort()).to.deep.equal(EXPECTED_NUMBERS);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://qatools.ro/api/calculate.php?firstNumber=60&secondNumber=5&operation=3",
+					"protocol": "http",
+					"host": [
+						"qatools",
+						"ro"
+					],
+					"path": [
+						"api",
+						"calculate.php"
+					],
+					"query": [
+						{
+							"key": "firstNumber",
+							"value": "60"
+						},
+						{
+							"key": "secondNumber",
+							"value": "5"
+						},
+						{
+							"key": "operation",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
