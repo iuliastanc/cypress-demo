@@ -52,7 +52,7 @@ describe('Calculate test suite', () => {
     },
   );
 
-  it.only('task demo', () => {
+  it('task demo', () => {
     cy.task('logToTerminal', 'this is a task message');
     cy.logToTerminal('this is a task message');
   });

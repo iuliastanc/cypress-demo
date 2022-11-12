@@ -19,3 +19,7 @@ npm run cyo
 ```bash
 npm run api:tests
 ```
+
+### [Mocha unit test framework](https://mochajs.org/)
+
+### [Chai assertion library](https://www.chaijs.com/guide/styles/#expect)

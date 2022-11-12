@@ -1,5 +1,7 @@
 #Custom
 cypress/screenshots
+cypress/reports
+newman
 
 # Logs
 logs
