@@ -6,7 +6,7 @@ describe('Calculate test suite', () => {
     cy.visit(`${getEnv('baseUrl')}/calculate/appApi.html`);
   });
 
-  it.only('should open the page with correct title', () => {
+  it('should open the page with correct title', () => {
     cy.title({ timeout: 1100 }).should('equal', 'SimpleCalculator');
   });
 
