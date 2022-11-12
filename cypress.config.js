@@ -8,7 +8,12 @@ const e2eConfig = {
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      on('task', {
+        logToTerminal(message) {
+          console.log(`@@@ ${message}`);
+          return null;
+        },
+      });
     },
     ...e2eConfig,
   },
